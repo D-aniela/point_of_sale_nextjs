@@ -5,6 +5,7 @@ import ShoppingCartItem from './ShoppingCartItem'
 import Amount from './Amount'
 import { formatCurrency } from '../../src/utils'
 import CouponForm from './CouponForm'
+import SubmitOrderForm from './SubmitOrderForm'
 
 export default function ShoppingCart() {
   const contents = useStore((state) => state.contents)
@@ -36,6 +37,7 @@ export default function ShoppingCart() {
             <Amount label='Total a Pagar' amount={formatCurrency(total)} />
           </dl>
           <CouponForm />
+          <SubmitOrderForm />
         </>
       ) : (
         <p className='text-xl text-center text-gray-900'>
